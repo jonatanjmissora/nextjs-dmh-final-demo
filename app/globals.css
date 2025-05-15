@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-size: clamp(0.625rem, 1.119vw - 0.092rem, 1.25rem);
+}
+
+.card-shadow {
+    filter: drop-shadow(0px 2px 3px rgb(0, 0, 0, 0.25))
+}
+
+.link-border {
+    position: relative
+}
+
+.link-border::after {
+    position: absolute;
+    content: "";
+    bottom: 0.2rem;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #999;
+}
+
+.link-noborder {
+    position: relative
+}
+
+.link-noborder::after {
+    position: absolute;
+    z-index: 10;
+    content: "";
+    bottom: 0.25rem;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: white
+}
+
+input::-webkit-input-placeholder {
+    white-space: inherit;
+}
+
+.input-linebr::-webkit-input-placeholder {
+    white-space: inherit;
+    top: -12px;
+    position: relative;
+}
+
+.input-nolinebr::-webkit-input-placeholder {
+    white-space: inherit;
+    top: 0px;
+    position: relative;
+}
+
+.rccs,
+.rccs__card {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+@layer components {
+    .input-linebreak {
+        @apply input-linebr;
+    }
+
+    .input-nolinebreak {
+        @apply input-nolinebr;
+    }
+
+    .nav-btn {
+        @apply text-[1.5rem] sm:text-[16px] font-semibold tracking-wider bg-primary border border-primary px-7 py-3 rounded-lg xl:px-5 xl:py-2;
+    }
+
+    .form-container {
+        @apply flex-1 bg-my-grey-dark flex flex-col items-center
+    }
+
+    .dashboard-container {
+        @apply flex-1 bg-my-grey-light flex flex-col sm:flex-row
+    }
+
+    .dashboard-content-container {
+        @apply p-8 flex flex-col gap-7 sm:flex-1 sm:py-28 sm:px-20 xl:py-12 xl:px-24 xl:gap-5
+    }
+
+    .input-form {
+        @apply w-full h-[5rem] bg-my-white text-[1.6rem] py-6 px-8 rounded-xl tracking-wider outline-none outline-offset-0 border-[3px] border-white focus:border-[3px] focus:border-primary sm:h-[60px] xl:py-5 xl:px-8 xl:text-[1.25rem] 2xl:h-[73px]
+    }
+
+    .button-form {
+        @apply w-full h-[5rem] flex justify-center items-center text-[1.6rem] py-6 rounded-xl tracking-wider font-semibold bg-primary sm:h-[60px] xl:py-5 xl:text-[1.25rem] 2xl:h-[73px]
+    }
+
+    .card {
+        @apply rounded-lg card-shadow
+    }
+}
