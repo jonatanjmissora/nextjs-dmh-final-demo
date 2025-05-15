@@ -22,10 +22,11 @@ Manage your credit cards.
 
 Development-mode
 =================
-If you need to use this code on your local repository, change the **URL_domain** on **app/services/http.services.ts**
+See original repo down there!
 
 ******************************
 
-Live demo [here](https://digitalmoneyhouse.netlify.app)
+🔗 Live demo [here](https://nextjs-dmh-final-demo.vercel.app) ⚠ Warning!! demo version, no data will be store
+🔗 Original repo [here](https://github.com/jonatanjmissora/nextjs-dmh-final)
 
 This repository was built by [Jonatan Missora](https://github.com/jonatanjmissora).  👉  <img src="/public/avatar.webp" width="70px" height="auto" alt="avatar image"/> 
